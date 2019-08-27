@@ -1,0 +1,55 @@
+ext {
+
+    dependVersion = [
+            androidSupportSdkVersion: "28.0.0",
+            retrofitSdkVersion      : "2.6.0",
+            glideSdkVersion         : "4.9.0",
+            butterknifeSdkVersion   : "9.0.0",
+            rxlifecycle2SdkVersion  : "2.2.2",
+
+    ]
+
+    externalCompileSDKVersion = 28
+    externalBuildToolsVersion = "28.0.3"
+    externalMinSDKVersion = 19
+    externalTargetSDKVersion = 28
+
+    externalVersionCode = 1
+    externalVersionName = '1.0'
+
+    //support
+    externalAndroidAppcompat = "com.android.support:appcompat-v7:$dependVersion.androidSupportSdkVersion"
+    externalAndroidSupportV4 = "com.android.support:support-v4:$dependVersion.androidSupportSdkVersion"
+    externalAndroidDesign = "com.android.support:design:$dependVersion.androidSupportSdkVersion"
+    externalAndroidRecyclerviewV7 = "com.android.support:recyclerview-v7:$dependVersion.androidSupportSdkVersion"
+    externalAndroidCardviewV7 = "com.android.support:cardview-v7:$dependVersion.androidSupportSdkVersion"
+    externalAndroidConstraintLayout = 'com.android.support.constraint:constraint-layout:1.1.3'
+    externalAndroidAnnotations = "com.android.support:support-annotations:$dependVersion.androidSupportSdkVersion"
+
+    //network
+    externalRetrofit = "com.squareup.retrofit2:retrofit:$dependVersion.retrofitSdkVersion"
+    externalRetrofitConverterGson = "com.squareup.retrofit2:converter-gson:$dependVersion.retrofitSdkVersion"
+    externalRetrofitRxjava2 = "com.squareup.retrofit2:adapter-rxjava2:$dependVersion.retrofitSdkVersion"
+    externalOkhttp3 = "com.squareup.okhttp3:okhttp:3.12.3"
+
+    externalGlide = "com.github.bumptech.glide:glide:$dependVersion.glideSdkVersion"
+    externalGlideCompiler = "com.github.bumptech.glide:compiler:$dependVersion.glideSdkVersion"
+    externalGlideLoaderOkhttp3 = "com.github.bumptech.glide:okhttp3-integration:$dependVersion.glideSdkVersion"
+
+    //view
+    externalButterknife = "com.jakewharton:butterknife:$dependVersion.butterknifeSdkVersion"
+    externalButterknifeCompiler = "com.jakewharton:butterknife-compiler:$dependVersion.butterknifeSdkVersion"
+
+    //rx2
+    //rxbind包含了rxandroid、rxjava
+    externalRxbinding = 'com.jakewharton.rxbinding3:rxbinding:3.0.0'
+    externalRxandroid2 = "io.reactivex.rxjava2:rxandroid:2.1.1"
+    externalRxjava2 = "io.reactivex.rxjava2:rxjava:2.2.10"
+
+    externalRxlifecycle2 = "com.trello.rxlifecycle2:rxlifecycle:$dependVersion.rxlifecycle2SdkVersion"
+    externalRxlifecycle2Android = "com.trello.rxlifecycle2:rxlifecycle-android:$dependVersion.rxlifecycle2SdkVersion"
+    externalRxlifecycle2Components = "com.trello.rxlifecycle2:rxlifecycle-components:$dependVersion.rxlifecycle2SdkVersion"
+
+    //64k
+    externalMultidex = "com.android.support:multidex:1.0.3"
+}

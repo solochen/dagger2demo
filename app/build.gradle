@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion externalCompileSDKVersion
+    buildToolsVersion externalBuildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+    dexOptions {
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId "com.mydagger.demo"
+        minSdkVersion externalMinSDKVersion
+        targetSdkVersion externalTargetSDKVersion
+        versionCode externalVersionCode
+        versionName externalVersionName
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi-v7a"
+        }
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation externalAndroidAppcompat
+    implementation externalAndroidDesign
+    implementation externalAndroidSupportV4
+    implementation externalAndroidCardviewV7
+    implementation externalAndroidRecyclerviewV7
+    implementation externalAndroidAnnotations
+    implementation externalAndroidConstraintLayout
+    implementation externalRetrofit
+    implementation externalRetrofitConverterGson
+    implementation externalRetrofitRxjava2
+    implementation externalOkhttp3
+    implementation externalButterknife
+    annotationProcessor(externalButterknifeCompiler) {
+        exclude module: 'support-annotations'
+    }
+    implementation externalRxandroid2
+    implementation externalRxjava2
+    implementation externalRxlifecycle2
+    implementation externalRxlifecycle2Android
+    implementation externalRxlifecycle2Components
+    implementation externalMultidex
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
