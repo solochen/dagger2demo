@@ -55,15 +55,23 @@ dependencies {
     implementation externalRetrofitRxjava2
     implementation externalOkhttp3
     implementation externalButterknife
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor(externalButterknifeCompiler) {
         exclude module: 'support-annotations'
     }
-    implementation externalRxandroid2
     implementation externalRxjava2
+    implementation externalRxandroid2
     implementation externalRxlifecycle2
     implementation externalRxlifecycle2Android
     implementation externalRxlifecycle2Components
     implementation externalMultidex
+
+    //dagger2
+    implementation externalDagger2
+    implementation externalDagger2Android
+    implementation externalDagger2AndroidSupport
+    annotationProcessor externalDagger2Compiler
+    annotationProcessor externalDagger2AndroidProcessor
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'

@@ -6,6 +6,7 @@ ext {
             glideSdkVersion         : "4.9.0",
             butterknifeSdkVersion   : "9.0.0",
             rxlifecycle2SdkVersion  : "2.2.2",
+            dagger2SdkVersion       : "2.24"
 
     ]
 
@@ -49,6 +50,13 @@ ext {
     externalRxlifecycle2 = "com.trello.rxlifecycle2:rxlifecycle:$dependVersion.rxlifecycle2SdkVersion"
     externalRxlifecycle2Android = "com.trello.rxlifecycle2:rxlifecycle-android:$dependVersion.rxlifecycle2SdkVersion"
     externalRxlifecycle2Components = "com.trello.rxlifecycle2:rxlifecycle-components:$dependVersion.rxlifecycle2SdkVersion"
+
+    //dagger2
+    externalDagger2 = "com.google.dagger:dagger:$dependVersion.dagger2SdkVersion"
+    externalDagger2Android = "com.google.dagger:dagger-android:$dependVersion.dagger2SdkVersion"
+    externalDagger2AndroidSupport = "com.google.dagger:dagger-android-support:$dependVersion.dagger2SdkVersion"
+    externalDagger2Compiler = "com.google.dagger:dagger-compiler:$dependVersion.dagger2SdkVersion"
+    externalDagger2AndroidProcessor = "com.google.dagger:dagger-android-processor:$dependVersion.dagger2SdkVersion"
 
     //64k
     externalMultidex = "com.android.support:multidex:1.0.3"
