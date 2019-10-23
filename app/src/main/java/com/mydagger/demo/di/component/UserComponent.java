@@ -1,8 +1,8 @@
 package com.mydagger.demo.di.component;
 
-import com.mydagger.demo.aframe.di.component.AppComponent;
+import com.solomvp.frame.di.component.AppComponent;
 import com.mydagger.demo.di.module.UserModule;
-import com.mydagger.demo.aframe.di.scope.ActivityScope;
+import com.solomvp.frame.di.scope.ActivityScope;
 import com.mydagger.demo.feature.user.contract.UserContract;
 import com.mydagger.demo.feature.user.ui.activity.LoginActivity;
 

@@ -5,6 +5,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.InflateException;
 
+import com.solomvp.frame.mvp.IPresenter;
+
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;

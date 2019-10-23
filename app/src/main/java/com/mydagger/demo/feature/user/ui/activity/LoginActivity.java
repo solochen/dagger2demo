@@ -25,9 +25,9 @@ public class LoginActivity extends BaseActivity<UserPresenter> implements UserCo
 
     @BindView(R.id.fab)
     FloatingActionButton fab;
-
-    @Inject
-    Gson gson;
+//
+//    @Inject
+//    Gson gson;
 
     @Override
     protected int initView(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class LoginActivity extends BaseActivity<UserPresenter> implements UserCo
             @Override
             public void onClick(View view) {
                 mPresenter.getUser();
-                Log.e("solo", "gson:---->" + gson);
+//                Log.e("solo", "gson:---->" + gson);
             }
         });
     }

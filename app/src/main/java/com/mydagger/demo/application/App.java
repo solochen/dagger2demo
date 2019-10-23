@@ -3,10 +3,10 @@ package com.mydagger.demo.application;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
-import com.mydagger.demo.aframe.di.component.DaggerAppComponent;
+import com.solomvp.frame.di.component.DaggerAppComponent;
 import com.mydagger.demo.base.GlobalHttpHandlerImpl;
-import com.mydagger.demo.aframe.di.component.AppComponent;
-import com.mydagger.demo.aframe.di.module.GlobalConfigModule;
+import com.solomvp.frame.di.component.AppComponent;
+import com.solomvp.frame.di.module.GlobalConfigModule;
 
 
 /**

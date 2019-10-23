@@ -1,7 +1,7 @@
 package com.mydagger.demo.feature.user.contract;
 
-import com.mydagger.demo.base.IModel;
-import com.mydagger.demo.base.IView;
+import com.solomvp.frame.mvp.IModel;
+import com.solomvp.frame.mvp.IView;
 import com.mydagger.demo.feature.user.model.entity.Self;
 
 import io.reactivex.Observable;

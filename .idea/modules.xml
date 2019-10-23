@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/dagger.iml" filepath="$PROJECT_DIR$/dagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solo/solo.iml" filepath="$PROJECT_DIR$/solo/solo.iml" />
     </modules>
   </component>
 </project>
