@@ -2,10 +2,10 @@ package com.mydagger.demo.feature.user.presenter;
 
 import com.mydagger.demo.base.BasePresenter;
 import com.mydagger.demo.base.NObserver;
-import com.mydagger.demo.di.scope.ActivityScope;
+import com.mydagger.demo.aframe.di.scope.ActivityScope;
 import com.mydagger.demo.feature.user.contract.UserContract;
 import com.mydagger.demo.feature.user.model.entity.Self;
-import com.mydagger.demo.http.RetryWithDelay;
+import com.mydagger.demo.aframe.http.RetryWithDelay;
 
 import javax.inject.Inject;
 

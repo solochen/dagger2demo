@@ -9,10 +9,8 @@ import android.util.Log;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.stream.JsonReader;
-import com.mydagger.demo.http.GlobalHttpHandler;
-import com.mydagger.demo.http.log.RequestInterceptor;
-
-import javax.inject.Inject;
+import com.mydagger.demo.aframe.http.GlobalHttpHandler;
+import com.mydagger.demo.aframe.http.log.RequestInterceptor;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;

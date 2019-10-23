@@ -1,6 +1,6 @@
 package com.mydagger.demo.feature.user.model;
 
-import com.mydagger.demo.di.scope.ActivityScope;
+import com.mydagger.demo.aframe.di.scope.ActivityScope;
 import com.mydagger.demo.feature.user.contract.UserContract;
 import com.mydagger.demo.feature.user.model.entity.Self;
 import com.mydagger.demo.feature.user.model.service.UserService;

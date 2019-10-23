@@ -50,20 +50,27 @@ dependencies {
     implementation externalAndroidRecyclerviewV7
     implementation externalAndroidAnnotations
     implementation externalAndroidConstraintLayout
+    implementation externalMultidex
+
+    /**----Retrofit、Rxjava2、dagger2 等框架所必须 start ---**/
+    //retrofit、okhttp
     implementation externalRetrofit
     implementation externalRetrofitConverterGson
     implementation externalRetrofitRxjava2
     implementation externalOkhttp3
+
+    //butterknife
     implementation externalButterknife
     annotationProcessor(externalButterknifeCompiler) {
         exclude module: 'support-annotations'
     }
+
+    //rxjava2
     implementation externalRxjava2
     implementation externalRxandroid2
     implementation externalRxlifecycle2
     implementation externalRxlifecycle2Android
     implementation externalRxlifecycle2Components
-    implementation externalMultidex
 
     //dagger2
     implementation externalDagger2
@@ -71,6 +78,8 @@ dependencies {
     implementation externalDagger2AndroidSupport
     annotationProcessor externalDagger2Compiler
     annotationProcessor externalDagger2AndroidProcessor
+    /**----Retrofit、Rxjava2、dagger2 等框架所必须 end---**/
+
 
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
