@@ -87,6 +87,7 @@ dependencies {
     }
     annotationProcessor externalDagger2Compiler
     annotationProcessor externalDagger2AndroidProcessor
+    annotationProcessor externalGlideCompiler
 
     implementation project(':solo')
 

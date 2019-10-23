@@ -59,6 +59,12 @@ dependencies {
     api externalDagger2AndroidSupport
     annotationProcessor externalDagger2Compiler
     annotationProcessor externalDagger2AndroidProcessor
+
+    //glide
+    api externalGlide
+    api externalGlideTransformations
+    annotationProcessor externalGlideCompiler
+
     /**----Retrofit、Rxjava2、dagger2 等框架所必须 end---**/
 
 
