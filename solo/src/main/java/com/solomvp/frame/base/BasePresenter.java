@@ -1,4 +1,4 @@
-package com.solomvp.frame.mvp;
+package com.solomvp.frame.base;
 
 import com.solomvp.frame.mvp.IModel;
 import com.solomvp.frame.mvp.IPresenter;

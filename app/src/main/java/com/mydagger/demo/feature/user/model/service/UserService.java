@@ -4,6 +4,7 @@ import com.mydagger.demo.feature.user.model.entity.Self;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -13,6 +14,7 @@ import retrofit2.http.Query;
 
 public interface UserService {
 
+//    @Headers({"Domain-Name: baidu"})
     @GET("/api/pi/public/common_config/1.0/version")
     Observable<Self> getUser(@Query("token") String token);
 

@@ -38,6 +38,7 @@ dependencies {
     api externalRetrofitConverterGson
     api externalRetrofitRxjava2
     api externalOkhttp3
+    api externalRetrofitUrlManager
 
     //butterknife
     api externalButterknife

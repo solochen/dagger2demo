@@ -81,6 +81,7 @@ dependencies {
 //    /**----Retrofit、Rxjava2、dagger2 等框架所必须 end---**/
 
 
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor(externalButterknifeCompiler) {
         exclude module: 'support-annotations'
     }

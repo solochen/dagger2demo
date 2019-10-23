@@ -3,10 +3,13 @@ package com.mydagger.demo.application;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
+import com.mydagger.demo.base.Urls;
 import com.solomvp.frame.di.component.DaggerAppComponent;
 import com.mydagger.demo.base.GlobalHttpHandlerImpl;
 import com.solomvp.frame.di.component.AppComponent;
 import com.solomvp.frame.di.module.GlobalConfigModule;
+
+import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 
 
 /**
@@ -25,7 +28,7 @@ public class App extends MultiDexApplication {
                 .builder()
                 .application(this)
                 .globalConfigModule(GlobalConfigModule.builder()
-                        .baseurl("http://192.168.2.203:8003")
+                        .baseurl(Urls.MAIN_HOST)
                         .globalHttpHandler(new GlobalHttpHandlerImpl(this))
                         .gsonConfiguration(((context, builder) -> {
 
@@ -34,13 +37,20 @@ public class App extends MultiDexApplication {
                             Log.e("solo", "app-retrofitConfiguration-----");
 
                         }).okhttpConfiguration((context1, builder1) -> {
-                            Log.e("solo", "app-okhttpConfiguration-----");
+
                         }).build())
                 .build();
         mAppComponent.inject(this);
+
+        configMultiUrl();
+
     }
 
     public AppComponent getAppComponent() {
         return mAppComponent;
+    }
+
+    private void configMultiUrl() {
+        RetrofitUrlManager.getInstance().putDomain("wangyi163", Urls.WY163_HOST);
     }
 }

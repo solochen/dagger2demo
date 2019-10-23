@@ -20,6 +20,7 @@ import javax.inject.Singleton;
 import dagger.Binds;
 import dagger.Module;
 import dagger.Provides;
+import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
 import okhttp3.Dispatcher;
 import okhttp3.HttpUrl;
 import okhttp3.Interceptor;
@@ -88,6 +89,9 @@ public abstract class HttpModule {
                 builder.addInterceptor(interceptor);
             }
         }
+
+        //配置动态请求URL retrofit管理类, 有多URl请求需求时配置使用
+        RetrofitUrlManager.getInstance().with(builder).build();
 
         //为 OkHttp 设置默认的线程池
         builder.dispatcher(new Dispatcher(executorService));

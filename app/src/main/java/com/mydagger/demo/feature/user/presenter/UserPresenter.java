@@ -1,6 +1,6 @@
 package com.mydagger.demo.feature.user.presenter;
 
-import com.solomvp.frame.mvp.BasePresenter;
+import com.solomvp.frame.base.BasePresenter;
 import com.solomvp.frame.mvp.NObserver;
 import com.solomvp.frame.di.scope.ActivityScope;
 import com.mydagger.demo.feature.user.contract.UserContract;
@@ -49,6 +49,7 @@ public class UserPresenter extends BasePresenter<UserContract.Model, UserContrac
                     }
                 });
     }
+
 
     @Override
     public void onDestroy() {

@@ -1,4 +1,4 @@
-package com.mydagger.demo.base;
+package com.solomvp.frame.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -38,11 +38,14 @@ public abstract class BaseActivity<P extends IPresenter> extends AppCompatActivi
             if (e instanceof InflateException) throw e;
             e.printStackTrace();
         }
+
+        injectInstance(savedInstanceState);
         initData(savedInstanceState);
 
     }
 
     protected abstract int initView(Bundle savedInstanceState);
+    protected abstract void injectInstance(Bundle savedInstanceState);
     protected abstract void initData(Bundle savedInstanceState);
 
     @Override
