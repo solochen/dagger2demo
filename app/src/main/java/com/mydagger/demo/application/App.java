@@ -1,8 +1,9 @@
-package com.mydagger.demo.base;
+package com.mydagger.demo.application;
 
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
+import com.mydagger.demo.base.GlobalHttpHandlerImpl;
 import com.mydagger.demo.di.component.AppComponent;
 import com.mydagger.demo.di.component.DaggerAppComponent;
 import com.mydagger.demo.di.module.GlobalConfigModule;
@@ -26,6 +27,9 @@ public class App extends MultiDexApplication {
                 .globalConfigModule(GlobalConfigModule.builder()
                         .baseurl("http://192.168.2.203:8003")
                         .globalHttpHandler(new GlobalHttpHandlerImpl(this))
+                        .gsonConfiguration(((context, builder) -> {
+
+                        }))
                         .retrofitConfiguration((context1, builder1) -> {
                             Log.e("solo", "app-retrofitConfiguration-----");
 

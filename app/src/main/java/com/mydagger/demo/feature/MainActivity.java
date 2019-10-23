@@ -1,15 +1,13 @@
 package com.mydagger.demo.feature;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.mydagger.demo.R;
-import com.mydagger.demo.base.App;
+import com.mydagger.demo.application.App;
 import com.mydagger.demo.base.User;
 import com.mydagger.demo.di.component.DaggerActivityComponent;
-import com.mydagger.demo.di.module.ActivityModule;
 
 import javax.inject.Inject;
 

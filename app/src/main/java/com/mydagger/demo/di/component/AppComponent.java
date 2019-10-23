@@ -2,7 +2,8 @@ package com.mydagger.demo.di.component;
 
 import android.app.Application;
 
-import com.mydagger.demo.base.App;
+import com.google.gson.Gson;
+import com.mydagger.demo.application.App;
 import com.mydagger.demo.base.User;
 import com.mydagger.demo.di.module.AppModule;
 import com.mydagger.demo.di.module.GlobalConfigModule;
@@ -27,6 +28,8 @@ public interface AppComponent {
     Application application();
 
     Retrofit retrofit();
+
+    Gson gson();
 
     @Deprecated
     User getUser();

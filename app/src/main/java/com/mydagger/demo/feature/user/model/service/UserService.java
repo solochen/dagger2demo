@@ -13,7 +13,7 @@ import retrofit2.http.Query;
 
 public interface UserService {
 
-    @POST("/api/user/getInfo")
+    @GET("/api/pi/public/common_config/1.0/version")
     Observable<Self> getUser(@Query("token") String token);
 
 }

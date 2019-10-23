@@ -28,7 +28,7 @@ public class UserPresenter extends BasePresenter<UserContract.Model, UserContrac
     public void getUser() {
         mModel.getUsers("a123456")
                 .subscribeOn(Schedulers.io())
-                .retryWhen(new RetryWithDelay(3, 2)) //重试（参数1 重试几次，参数2 重试间隔单位s）
+//                .retryWhen(new RetryWithDelay(3, 2)) //重试（参数1 重试几次，参数2 重试间隔单位s）
                 .doOnSubscribe(disposable -> {
 
                 })

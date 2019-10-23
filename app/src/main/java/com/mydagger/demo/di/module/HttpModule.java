@@ -46,9 +46,9 @@ public abstract class HttpModule {
                                     Retrofit.Builder builder,
                                     OkHttpClient client,
                                     HttpUrl httpUrl,
+                                    Gson gson,
                                     RetrofitConfiguration retrofitConfiguration) {
 
-        Gson gson = new GsonBuilder().setLenient().create();
         builder.baseUrl(httpUrl).client(client);
         builder.addCallAdapterFactory(RxJava2CallAdapterFactory.create());
         builder.addConverterFactory(GsonConverterFactory.create(gson));

@@ -39,6 +39,7 @@ public class GlobalConfigModule {
     ExecutorService mExecutorService;
     HttpModule.RetrofitConfiguration mRetrofitConfiguration;
     HttpModule.OkHttpConfiguration mOkhttpConfiguration;
+    AppModule.GsonConfiguration mGsonConfiguration;
 
     BaseUrl mBaseUrl;
     RequestInterceptor.Level mPrintHttpLogLevel;
@@ -124,6 +125,13 @@ public class GlobalConfigModule {
         return mFormatPrinter == null ? new DefaultFormatPrinter() : mFormatPrinter;
     }
 
+    @Singleton
+    @Provides
+    @Nullable
+    AppModule.GsonConfiguration provideGsonConfiguration() {
+        return mGsonConfiguration;
+    }
+
     /**
      * 返回一个全局公用的线程池,适用于大多数异步需求。
      * 避免多个线程池创建带来的资源消耗。
@@ -147,6 +155,7 @@ public class GlobalConfigModule {
         private RequestInterceptor.Level printHttpLogLevel;
         private FormatPrinter formatPrinter;
         private ExecutorService executorService;
+        private AppModule.GsonConfiguration gsonConfiguration;
 
         private Builder() {
         }
@@ -174,6 +183,11 @@ public class GlobalConfigModule {
             if (interceptors == null)
                 interceptors = new ArrayList<>();
             this.interceptors.add(interceptor);
+            return this;
+        }
+
+        public Builder gsonConfiguration(AppModule.GsonConfiguration gsonConfiguration) {
+            this.gsonConfiguration = gsonConfiguration;
             return this;
         }
 

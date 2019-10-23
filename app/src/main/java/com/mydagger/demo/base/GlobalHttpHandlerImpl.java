@@ -4,23 +4,43 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
+import android.util.Log;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.stream.JsonReader;
 import com.mydagger.demo.http.GlobalHttpHandler;
 import com.mydagger.demo.http.log.RequestInterceptor;
+
+import javax.inject.Inject;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 /**
  * Created by chenshaolong on 2019/10/16.
  */
 
 public class GlobalHttpHandlerImpl implements GlobalHttpHandler {
+
     private Context context;
+    private Gson mGson;
 
     public GlobalHttpHandlerImpl(Context context) {
         this.context = context;
+        mGson = new GsonBuilder().create();
+    }
+
+    @NonNull
+    @Override
+    public Request onHttpRequestBefore(@NonNull Interceptor.Chain chain, @NonNull Request request) {
+        //配置公共header
+        return chain.request()
+                .newBuilder()
+                .header("Token", "4e585caaeaccead0c0a2542c2f01e0604f5a8712040a596fdb21a186db2b274eee6ed134ba5a9ec58471539871ba24c95473defebe280c24")
+                .build();
     }
 
     /**
@@ -37,11 +57,20 @@ public class GlobalHttpHandlerImpl implements GlobalHttpHandler {
     public Response onHttpResultResponse(@Nullable String httpResult, @NonNull Interceptor.Chain chain, @NonNull Response response) {
         if (!TextUtils.isEmpty(httpResult) && RequestInterceptor.isJson(response.body().contentType())) {
             try {
+                BaseResponse httpResponse = mGson.fromJson(httpResult, BaseResponse.class);
+                if (!httpResponse.isSuccess()) {
+                    return response;
+                }
             } catch (Exception e) {
                 e.printStackTrace();
                 return response;
             }
         }
+
+        ResponseBody body = response.body();
+        JsonReader jsonReader = new JsonReader(body.charStream());
+        String simpleResponse = mGson.fromJson(jsonReader, String.class);
+        Log.e("solo", simpleResponse);
 
         /* 这里如果发现 token 过期, 可以先请求最新的 token, 然后在拿新的 token 放入 Request 里去重新请求
         注意在这个回调之前已经调用过 proceed(), 所以这里必须自己去建立网络请求, 如使用 Okhttp 使用新的 Request 去请求
@@ -57,19 +86,5 @@ public class GlobalHttpHandlerImpl implements GlobalHttpHandler {
         return response;
     }
 
-    /**
-     * 这里可以在请求服务器之前拿到 {@link Request}, 做一些操作比如给 {@link Request} 统一添加 token 或者 header 以及参数加密等操作
-     *
-     * @param chain   {@link okhttp3.Interceptor.Chain}
-     * @param request {@link Request}
-     * @return {@link Request}
-     */
-    @NonNull
-    @Override
-    public Request onHttpRequestBefore(@NonNull Interceptor.Chain chain, @NonNull Request request) {
-        /* 如果需要在请求服务器之前做一些操作, 则重新构建一个做过操作的 Request 并 return, 如增加 Header、Params 等请求信息, 不做操作则直接返回参数 request
-        return chain.request().newBuilder().header("token", tokenId)
-                              .build(); */
-        return request;
-    }
+
 }
