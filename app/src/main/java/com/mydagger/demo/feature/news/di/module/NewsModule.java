@@ -1,10 +1,8 @@
 package com.mydagger.demo.feature.news.di.module;
 
-import android.support.v7.widget.LinearLayoutManager;
-
 import com.mydagger.demo.feature.news.contract.NewsContract;
 import com.mydagger.demo.feature.news.model.NewsModel;
-import com.mydagger.demo.feature.news.model.entity.News;
+import com.mydagger.demo.entity.News;
 import com.mydagger.demo.feature.news.ui.adapter.NewsAdapter;
 import com.solomvp.frame.di.scope.ActivityScope;
 

@@ -2,8 +2,8 @@ package com.mydagger.demo.feature.news.contract;
 
 import android.app.Activity;
 
-import com.mydagger.demo.feature.news.model.entity.News;
-import com.mydagger.demo.feature.news.model.entity.NewsBaseEntity;
+import com.mydagger.demo.entity.News;
+import com.mydagger.demo.entity.NewsBaseEntity;
 import com.solomvp.frame.mvp.IModel;
 import com.solomvp.frame.mvp.IView;
 

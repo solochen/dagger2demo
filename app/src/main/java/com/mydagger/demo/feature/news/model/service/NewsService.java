@@ -1,7 +1,7 @@
 package com.mydagger.demo.feature.news.model.service;
 
-import com.mydagger.demo.feature.news.model.entity.News;
-import com.mydagger.demo.feature.news.model.entity.NewsBaseEntity;
+import com.mydagger.demo.entity.News;
+import com.mydagger.demo.entity.NewsBaseEntity;
 
 import java.util.List;
 

@@ -1,9 +1,8 @@
 package com.mydagger.demo.feature.news.presenter;
 
 import com.mydagger.demo.feature.news.contract.NewsContract;
-import com.mydagger.demo.feature.news.model.entity.News;
-import com.mydagger.demo.feature.news.model.entity.NewsBaseEntity;
-import com.mydagger.demo.feature.user.model.entity.Self;
+import com.mydagger.demo.entity.News;
+import com.mydagger.demo.entity.NewsBaseEntity;
 import com.solomvp.frame.base.BasePresenter;
 import com.solomvp.frame.di.scope.ActivityScope;
 import com.solomvp.frame.mvp.NObserver;

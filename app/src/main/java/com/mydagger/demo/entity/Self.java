@@ -1,4 +1,4 @@
-package com.mydagger.demo.feature.user.model.entity;
+package com.mydagger.demo.entity;
 
 import android.os.Parcel;
 import android.os.Parcelable;

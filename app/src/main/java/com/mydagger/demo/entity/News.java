@@ -1,4 +1,4 @@
-package com.mydagger.demo.feature.news.model.entity;
+package com.mydagger.demo.entity;
 
 /**
  * Created by chenshaolong on 2019/10/23.

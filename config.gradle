@@ -62,7 +62,7 @@ ext {
     //glide
     externalGlide = "com.github.bumptech.glide:glide:4.6.1"
     externalGlideCompiler = "com.github.bumptech.glide:compiler:4.7.1"
-    externalGlideTransformations = 'jp.wasabeef:glide-transformations:3.1.1'
+//    externalGlideTransformations = 'jp.wasabeef:glide-transformations:3.1.1'
 
     //64k
     externalMultidex = "com.android.support:multidex:1.0.3"

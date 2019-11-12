@@ -1,11 +1,9 @@
 package com.mydagger.demo.feature.user.model.service;
 
-import com.mydagger.demo.feature.user.model.entity.Self;
+import com.mydagger.demo.entity.Self;
 
 import io.reactivex.Observable;
 import retrofit2.http.GET;
-import retrofit2.http.Headers;
-import retrofit2.http.POST;
 import retrofit2.http.Query;
 
 /**

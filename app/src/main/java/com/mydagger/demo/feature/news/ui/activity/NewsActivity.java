@@ -10,7 +10,7 @@ import com.mydagger.demo.R;
 import com.mydagger.demo.application.App;
 import com.mydagger.demo.feature.news.contract.NewsContract;
 import com.mydagger.demo.feature.news.di.component.DaggerNewsComponent;
-import com.mydagger.demo.feature.news.model.entity.News;
+import com.mydagger.demo.entity.News;
 import com.mydagger.demo.feature.news.presenter.NewsPresenter;
 import com.mydagger.demo.feature.news.ui.adapter.NewsAdapter;
 import com.solomvp.frame.base.BaseActivity;

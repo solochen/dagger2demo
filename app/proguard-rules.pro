@@ -35,11 +35,20 @@
 
 
 ################common###############
-
--keep public class * implements com.jess.arms.integration.ConfigModule
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.view.View
+-keep public class com.android.vending.licensing.ILicensingService
+-keep class android.support.** {*;}
+-keep class com.google.**{*;}
 
  #实体类不参与混淆
--keep class com.jess.arms.widget.** { *; } #自定义控件不参与混淆
+-keep class com.mydagger.demo.entity.** { *; }
 -keep class * implements android.os.Parcelable {
   public static final android.os.Parcelable$Creator *;
 }
@@ -104,13 +113,15 @@
 
 
 ################glide###############
--keep public class * implements com.bumptech.glide.module.AppGlideModule
--keep public class * implements com.bumptech.glide.module.LibraryGlideModule
--keep class com.bumptech.glide.** { *; }
--keep public enum com.bumptech.glide.load.resource.bitmap.ImageHeaderParser$** {
-    **[] $VALUES;
-    public *;
+-keep public class * implements com.bumptech.glide.module.GlideModule
+-keep public class * extends com.bumptech.glide.module.AppGlideModule
+-keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
+  **[] $VALUES;
+  public *;
 }
+
+# for DexGuard only
+#-keepresourcexmlelements manifest/application/meta-data@value=GlideModule
 
 ################okhttp###############
 -keepattributes Signature

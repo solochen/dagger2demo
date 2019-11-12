@@ -62,7 +62,7 @@ dependencies {
 
     //glide
     api externalGlide
-    api externalGlideTransformations
+//    api externalGlideTransformations
     annotationProcessor externalGlideCompiler
 
     /**----Retrofit、Rxjava2、dagger2 等框架所必须 end---**/

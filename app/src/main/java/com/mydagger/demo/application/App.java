@@ -3,10 +3,10 @@ package com.mydagger.demo.application;
 import android.support.multidex.MultiDexApplication;
 import android.util.Log;
 
-import com.mydagger.demo.base.Urls;
-import com.solomvp.frame.di.component.DaggerAppComponent;
 import com.mydagger.demo.base.GlobalHttpHandlerImpl;
+import com.mydagger.demo.base.Urls;
 import com.solomvp.frame.di.component.AppComponent;
+import com.solomvp.frame.di.component.DaggerAppComponent;
 import com.solomvp.frame.di.module.GlobalConfigModule;
 
 import me.jessyan.retrofiturlmanager.RetrofitUrlManager;
@@ -43,7 +43,6 @@ public class App extends MultiDexApplication {
         mAppComponent.inject(this);
 
         configMultiUrl();
-
     }
 
     public AppComponent getAppComponent() {
@@ -53,4 +52,5 @@ public class App extends MultiDexApplication {
     private void configMultiUrl() {
         RetrofitUrlManager.getInstance().putDomain("wangyi163", Urls.WY163_HOST);
     }
+
 }

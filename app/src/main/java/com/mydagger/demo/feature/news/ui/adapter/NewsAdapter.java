@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.mydagger.demo.R;
-import com.mydagger.demo.feature.news.model.entity.News;
+import com.mydagger.demo.entity.News;
 import com.solomvp.frame.base.GlideApp;
 
 import java.util.List;

@@ -52,35 +52,6 @@ dependencies {
     implementation externalAndroidConstraintLayout
     implementation externalMultidex
 
-//    /**----Retrofit、Rxjava2、dagger2 等框架所必须 start ---**/
-//    //retrofit、okhttp
-//    implementation externalRetrofit
-//    implementation externalRetrofitConverterGson
-//    implementation externalRetrofitRxjava2
-//    implementation externalOkhttp3
-//
-//    //butterknife
-//    implementation externalButterknife
-//    annotationProcessor(externalButterknifeCompiler) {
-//        exclude module: 'support-annotations'
-//    }
-//
-//    //rxjava2
-//    implementation externalRxjava2
-//    implementation externalRxandroid2
-//    implementation externalRxlifecycle2
-//    implementation externalRxlifecycle2Android
-//    implementation externalRxlifecycle2Components
-//
-//    //dagger2
-//    implementation externalDagger2
-//    implementation externalDagger2Android
-//    implementation externalDagger2AndroidSupport
-//    annotationProcessor externalDagger2Compiler
-//    annotationProcessor externalDagger2AndroidProcessor
-//    /**----Retrofit、Rxjava2、dagger2 等框架所必须 end---**/
-
-
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
     annotationProcessor(externalButterknifeCompiler) {
         exclude module: 'support-annotations'
