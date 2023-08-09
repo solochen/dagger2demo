@@ -24,4 +24,7 @@ public abstract class UserModule {
      */
     @Binds
     abstract UserContract.Model bindUserModel(UserModel model);
+
+    @Binds
+    abstract String bindModel(UserModel model);
 }
