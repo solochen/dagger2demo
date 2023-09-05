@@ -43,11 +43,17 @@ public class App extends MultiDexApplication {
         mAppComponent.inject(this);
 
         configMultiUrl();
+        getAppComponent2();
     }
 
     public AppComponent getAppComponent() {
         return mAppComponent;
     }
+
+    public AppComponent getAppComponent2() {
+        return mAppComponent;
+    }
+
 
     private void configMultiUrl() {
         RetrofitUrlManager.getInstance().putDomain("wangyi163", Urls.WY163_HOST);
